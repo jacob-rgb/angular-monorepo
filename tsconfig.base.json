@@ -14,7 +14,14 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@angular-monorepo/data-access": [
+        "libs/products/data-access/src/index.ts"
+      ],
+      "@angular-monorepo/products": ["libs/products/features/src/index.ts"],
+      "@angular-monorepo/shared-ui": ["libs/shared/ui/src/index.ts"],
+      "@angular-monorepo/utils": ["libs/shared/utils/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

@@ -50,6 +50,13 @@
       "linter": "eslint",
       "style": "scss",
       "unitTestRunner": "jest"
+    },
+    "@nx/angular:library": {
+      "linter": "eslint",
+      "unitTestRunner": "jest"
+    },
+    "@nx/angular:component": {
+      "style": "css"
     }
   },
   "nxCloudAccessToken": "NmRlYjg1MGItNzg0Yy00MDA1LWFkYTctNGVkN2QwMjc0NGZjfHJlYWQtd3JpdGU="
