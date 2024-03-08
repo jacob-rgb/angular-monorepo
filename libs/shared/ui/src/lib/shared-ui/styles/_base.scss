@@ -1,20 +1,34 @@
+@import url('./_variablesCSS3.scss');
+@import url('./_materialVariablesCSS3.scss');
+@import url('./_materialComposOverrides.scss');
 
 * {
-    padding: 0;
-    margin: 0;
-    text-decoration: none;
-    box-sizing: border-box; 
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: var(--font-primary);
 }
 
 ul {
-    list-style-type: none;
+  list-style-type: none;
 }
 
-html,body {
-    
-    width: 100%;
-    width: 100dvw;
-    height: 100%;
-    height: 100dvh;
-    overflow-x: hidden;
+html,
+body {
+  width: 100%;
+  width: 100dvw;
+  height: 100%;
+  height: 100dvh;
+  overflow-x: hidden;
+}
+
+// cursor
+.c- {
+  &pointer {
+    cursor: pointer;
+  }
+  &block {
+    cursor: not-allowed;
+  }
 }
