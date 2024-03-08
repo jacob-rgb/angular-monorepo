@@ -2,7 +2,7 @@
   "name": "data-access",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/products/data-access/src",
-  "prefix": "angular-monorepo",
+  "prefix": "app",
   "tags": [],
   "projectType": "library",
   "targets": {}

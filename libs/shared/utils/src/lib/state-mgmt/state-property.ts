@@ -1,9 +1,9 @@
 import { signal } from "@angular/core"
 import { StatePropertyError } from "./models/state-property-error.model";
 
-export class StateProperty<T> {
+export class StateProperty<Type> {
 
-    private readonly _value = signal<T | null>(null)
+    private readonly _value = signal<Type | null>(null)
     private readonly _isLoading = signal<boolean>(false);
     private readonly _error = signal<StatePropertyError | null>(null);
 
@@ -11,7 +11,7 @@ export class StateProperty<T> {
     readonly $isLoading = this._isLoading.asReadonly(); 
     readonly $error = this._error.asReadonly(); 
 
-    public setValue(value: T | null) {
+    public setValue(value: Type | null) {
         this._value.set(value);
     }
 

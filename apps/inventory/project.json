@@ -2,25 +2,35 @@
   "name": "inventory",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
-  "prefix": "angular-monorepo",
+  "prefix": "app",
   "sourceRoot": "apps/inventory/src",
   "tags": [],
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:application",
-      "outputs": ["{options.outputPath}"],
+      "outputs": [
+        "{options.outputPath}"
+      ],
       "options": {
         "outputPath": "dist/apps/inventory",
         "index": "apps/inventory/src/index.html",
         "browser": "apps/inventory/src/main.ts",
-        "polyfills": ["zone.js"],
+        "polyfills": [
+          "zone.js"
+        ],
         "tsConfig": "apps/inventory/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
         "assets": [
           "apps/inventory/src/favicon.ico",
           "apps/inventory/src/assets"
         ],
-        "styles": ["apps/inventory/src/styles.scss"],
+        "styles": [
+          "@angular/material/prebuilt-themes/purple-green.css",
+          "apps/inventory/src/styles.scss"
+        ],
+        "stylePreprocessorOptions": {
+          "includePaths": ["libs/shared/ui/src/lib/shared-ui/styles"]
+        },
         "scripts": [],
         "server": "apps/inventory/src/main.server.ts",
         "prerender": true,

@@ -5,6 +5,7 @@ import { take } from 'rxjs/operators';
 export class StateManagement {
 
     public static load<T>(stateProp: StateProperty<T>, req:  Observable<T>): void {
+        stateProp.setIsLoading(true);
         req.pipe(take(1)).subscribe({
             next: res => {
                 stateProp.setValue(res)
