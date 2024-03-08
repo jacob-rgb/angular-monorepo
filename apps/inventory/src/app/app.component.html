@@ -2,11 +2,11 @@
 
 <router-outlet></router-outlet> -->
 <div class="main-container">
-    <app-gallery-list [items]="list" [colMin]="'400px'">
-        <ng-template #itemTemplate let-item="item">
-            <app-card-item ></app-card-item>
-        </ng-template>
-    </app-gallery-list>
+  <app-gallery-list [items]="list" [colMin]="'400px'">
+    <ng-template #itemTemplate let-item="item">
+      <app-card-item></app-card-item>
+    </ng-template>
+  </app-gallery-list>
 </div>
 <!-- @if (isProductLoading()) {
     <p>Cargando</p>

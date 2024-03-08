@@ -1,21 +1,21 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { TestBed } from '@angular/core/testing';
 import { GalleryListComponent } from './gallery-list.component';
 
 describe('GalleryListComponent', () => {
-  let component: GalleryListComponent;
-  let fixture: ComponentFixture<GalleryListComponent>;
-
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      imports: [GalleryListComponent],
-    }).compileComponents();
-
-    fixture = TestBed.createComponent(GalleryListComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+  @Component({
+    imports: [GalleryListComponent],
+    standalone: true,
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    template: `<app-gallery-list [items]="items"></app-gallery-list>`,
+  })
+  class TestHostComponent {
+    items = [];
+  }
 
   it('should create', () => {
-    expect(component).toBeTruthy();
+    const fixture = TestBed.createComponent(TestHostComponent);
+    fixture.componentInstance.items = [];
+    expect(fixture.componentInstance).toBeTruthy();
   });
 });

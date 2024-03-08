@@ -1,14 +1,16 @@
-
 <ul class="gallery-container" [style.grid-template-columns]="minMaxCol">
-    @for ( item of items(); track item['id']) {
-        <li class="gallery-container-item">
-            <ng-container [ngTemplateOutlet]="!!itemTemplate ? itemTemplate : default_gallery_item" [ngTemplateOutletContext]="{item}">
-            </ng-container>
-        </li>
-    }
+  @for ( item of items(); track item['id']) {
+  <li class="gallery-container-item">
+    <ng-container
+      [ngTemplateOutlet]="!!itemTemplate ? itemTemplate : default_gallery_item"
+      [ngTemplateOutletContext]="{item}"
+    >
+    </ng-container>
+  </li>
+  }
 </ul>
 
 <ng-template #default_gallery_item let-item="item">
-    <!-- <ng-content select="[slot=item]"></ng-content> -->
-    <p>{{ item?.id }}</p>
+  <!-- <ng-content select="[slot=item]"></ng-content> -->
+  <p>{{ item?.id }}</p>
 </ng-template>
