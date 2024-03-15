@@ -1,15 +1,15 @@
+import { ProductServiceProviders } from '@angular-monorepo/products/data-access';
 import { ApplicationConfig } from '@angular/core';
+import { provideClientHydration } from '@angular/platform-browser';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { provideRouter } from '@angular/router';
 import { appRoutes } from './app.routes';
-import { provideClientHydration } from '@angular/platform-browser';
-import { ProductServiceProviders } from '@angular-monorepo/data-access';
-import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 
 export const appConfig: ApplicationConfig = {
   providers: [
-    provideClientHydration(), 
+    provideClientHydration(),
     provideRouter(appRoutes),
     provideAnimationsAsync(),
-    ...ProductServiceProviders
+    ...ProductServiceProviders,
   ],
 };

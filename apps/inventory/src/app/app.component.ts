@@ -1,16 +1,24 @@
+import { ProductsService } from '@angular-monorepo/products/data-access';
+import {
+  CardItemComponent,
+  GalleryListComponent,
+} from '@angular-monorepo/shared/shared-ui';
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { NxWelcomeComponent } from './nx-welcome.component';
-import { ProductsService } from '@angular-monorepo/data-access';
-import { CardItemComponent, GalleryListComponent } from '@angular-monorepo/shared-ui';
 
 @Component({
   standalone: true,
-  imports: [NxWelcomeComponent, RouterModule, CardItemComponent, GalleryListComponent],
-  selector: 'angular-monorepo-root',
+  imports: [
+    NxWelcomeComponent,
+    RouterModule,
+    CardItemComponent,
+    GalleryListComponent,
+  ],
+  selector: 'app-angular-monorepo-root',
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AppComponent {
   title = 'inventory';
@@ -35,6 +43,5 @@ export class AppComponent {
     { id: 9 },
     { id: 10 },
     { id: 11 },
-  ]
-
+  ];
 }

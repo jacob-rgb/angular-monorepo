@@ -1,10 +1,8 @@
-import { StateProperty } from "@angular-monorepo/utils";
-import { Injectable } from "@angular/core";
-import { Product } from "../models/product.model";
+import { StateProperty } from '@angular-monorepo/shared/utils';
+import { Injectable } from '@angular/core';
+import { Product } from '../models/product.model';
 
-@Injectable() 
+@Injectable()
 export class ProductState {
-    
-    readonly product = new StateProperty<Product>();
-
+  readonly product = new StateProperty<Product>();
 }
